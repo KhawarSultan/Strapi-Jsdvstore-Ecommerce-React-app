@@ -1,1 +1,54 @@
 @import "../../../css-config/mixins.scss";
+.gradient {
+  background: linear-gradient(to right, #7d2ad0, #3f18d5);
+}
+.Banner-img {
+  width: 80%;
+  @include md {
+    width: 70%;
+  }
+}
+.Banner-heading {
+  font-size: 80px;
+  font-weight: bolder;
+
+  @include md {
+    font-size: 150px;
+  }
+}
+
+.Holo-Button {
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid white;
+  padding: 10px 20px;
+  color: black;
+  //   font-weight: bold;
+  transition: 0.4s;
+  color: white;
+  display: inline-block;
+}
+.Holo-Button:hover {
+  background-color: black;
+  border: 2px solid rgb(0, 0, 0);
+  color: white;
+  transition: 0.4s;
+}
+.Filled-Button {
+  background-color: black;
+  border: 2px solid rgb(0, 0, 0);
+  color: white;
+  cursor: pointer;
+  padding: 10px 20px;
+  display: inline-block;
+  transition: 0.4s;
+  color: white;
+
+ 
+}
+.Filled-Button:hover {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  transition: 0.4s;
+}

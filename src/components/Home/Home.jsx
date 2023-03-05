@@ -1,7 +1,11 @@
+import Banner from "./Banner/Banner";
 import "./Home.scss";
 const Home = () => {
     return (
-        <div> Hello </div>
+        <div>
+            <Banner />
+
+        </div>
     );
 };
 

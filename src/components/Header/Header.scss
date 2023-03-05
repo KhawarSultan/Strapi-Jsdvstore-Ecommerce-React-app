@@ -2,22 +2,22 @@
 .main-header {
   background-color: #212121;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+  width: 100%;
 }
-.main-header-child{
-    display: flex;
-    align-items: center;
-    justify-content:space-between;
+.main-header-child {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-  .center {
-   font-size: 24px;
-
-   @include md {
-      .center {
-          font-size: 28px;
-      }
+.center {
+  font-size: 25px;
+  @include md {
+    .center {
+      font-size: 28px;
     }
   }
+}
 .icon {
   font-size: 18px;
 }
@@ -39,12 +39,20 @@
 .links {
   display: none;
   @include md {
-    display: flex;
+    display: inline;
   }
 }
-// @include md{
-//     .links{
-//         display: none;
-//         visibility: hidden;
-//     }
+// .sticky-header {
+//   position: sticky;
+//   top: 0;
+//   transform: translateY (-80px);
+//   animation: stickyHeader 0.3s ease forwards;
+// }
+// @keyframes stickyHeader {
+//   0% {
+//     transform: translateY (-80px);
+//   }
+//   100% {
+//     transform: translateY(0);
+//   }
 // }

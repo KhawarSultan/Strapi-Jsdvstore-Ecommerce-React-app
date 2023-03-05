@@ -1,15 +1,19 @@
 import { Link } from "react-router-dom";
 import { FiShoppingCart } from 'react-icons/fi';
-import { TbSearch, CgShoppingCart, TbHeart } from "react-icons/tb";
+import { TbSearch, TbHeart } from "react-icons/tb";
 import "./Header.scss";
 
 const Header = () => {
+
+
+   
+
     return (
 
-        <div className="main-header px-3">
+        <div className="main-header px-3" >
             <div className="container py-3 text-white main-header-child ">
-                <div className="  ">
-                    <span className=" list-unstyled gap-3 links">
+                <div className=" links ">
+                    <span className=" list-unstyled gap-3 d-flex  ">
                         <li > <Link className="text-decoration-none text-white" to="/">Home</Link> </li>
                         <li > <Link className="text-decoration-none text-white" to="products">Products</Link> </li>
                         <li > <Link className="text-decoration-none text-white" to="category">Category</Link> </li>

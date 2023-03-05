@@ -16,6 +16,9 @@ function App() {
           <Route path="category" element={<Category/>} />
         </Routes>
       </div>
+
+      
+
     </>
   );
 }
