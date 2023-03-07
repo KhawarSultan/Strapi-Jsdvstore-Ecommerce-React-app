@@ -1,1 +1,39 @@
 @import "../../../css-config/mixins.scss";
+.Parent-Image-Hover {
+    // width: 100%;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .child-Image-Hover {
+    width: 100%;
+    height: 150px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:  center;
+    transition: 0.3s;
+  }
+  .child-Image-Hover:hover {
+    opacity: 0.8;
+    transform: scale(1.1);
+  }
+  .bg-one {
+    background-image: url(../../../assets/category/cat-1.jpg);
+    width: 100%;
+  }
+  span{
+    position: relative;
+  }
+  .heading{
+    font-size: 30px;
+    font-weight: bold;
+    
+  }
+  #title4::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border: 3px solid #872ce1;
+    width: 50%;
+}

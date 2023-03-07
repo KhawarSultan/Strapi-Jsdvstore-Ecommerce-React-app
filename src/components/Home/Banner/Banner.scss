@@ -1,6 +1,7 @@
 @import "../../../css-config/mixins.scss";
 .gradient {
-  background: linear-gradient(to right, #7d2ad0, #3f18d5);
+  background: linear-gradient(to right,  #872ce1, #3f18d5);
+  // #7d2ad0,
 }
 .Banner-img {
   width: 80%;
@@ -43,8 +44,6 @@
   display: inline-block;
   transition: 0.4s;
   color: white;
-
- 
 }
 .Filled-Button:hover {
   background-color: transparent;
@@ -52,3 +51,22 @@
   color: white;
   transition: 0.4s;
 }
+.left {
+  order: 2;
+}
+
+.right {
+  order: 1;
+}
+
+@include md {
+  .left {
+    order: 1;
+  }
+
+  .right {
+    order: 2;
+  }
+}
+
+
