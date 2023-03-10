@@ -1,30 +1,37 @@
+/* eslint-disable jsx-a11y/alt-text */
 import "./Category.scss";
+import Headphones from '../../../assets/category/cat-1.jpg'
+import Speakers from '../../../assets/category/cat-2.jpg'
+import Smartwatch from '../../../assets/category/cat-3.jpg'
+import Earbuds from '../../../assets/category/cat-4.jpg'
+
+
 const Category = () => {
     return (
 
         <div className="container">
             <div className="py-4">
-            <span id="title4" className="heading "> <b>Category</b>  
-            </span>
+                <span className="sec-heading"> <b>Category</b>
+                </span>
             </div>
-            
+
             <div className="row ">
-                <div className="col-lg-3 col-md-4 col-sm-6 col-12 py-3">
-                    <div class="Parent-Image-Hover">
-                        <div class="child-Image-Hover bg-one"></div>
+                <div className="col-lg-3 col-md-4 col-sm-6 col-12 py-3 ">
+                    <div class="Parent-category-Image-Hover bottom-top">
+                        <img src={Headphones} />
                     </div>
                 </div>
                 <div className="col-lg-3 col-md-4 col-sm-6 col-12 py-3">
-                    <div class="Parent-Image-Hover">
-                        <div class="child-Image-Hover bg-one"></div>
+                <div class="Parent-category-Image-Hover bottom-top">
+                        <img src={Speakers} />
                     </div>
                 </div> <div className="col-lg-3 col-md-4 col-sm-6 col-12 py-3">
-                    <div class="Parent-Image-Hover">
-                        <div class="child-Image-Hover bg-one"></div>
+                <div class="Parent-category-Image-Hover bottom-top">
+                        <img src={Smartwatch} />
                     </div>
                 </div> <div className="col-lg-3 col-md-4 col-sm-6 col-12 py-3">
-                    <div class="Parent-Image-Hover">
-                        <div class="child-Image-Hover bg-one"></div>
+                <div class="Parent-category-Image-Hover bottom-top">
+                        <img src={Earbuds} />
                     </div>
                 </div>
             </div>

@@ -1,39 +1,64 @@
 @import "../../../css-config/mixins.scss";
-.Parent-Image-Hover {
-    // width: 100%;
-    overflow: hidden;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  .child-Image-Hover {
-    width: 100%;
-    height: 150px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position:  center;
-    transition: 0.3s;
-  }
-  .child-Image-Hover:hover {
-    opacity: 0.8;
-    transform: scale(1.1);
-  }
-  .bg-one {
-    background-image: url(../../../assets/category/cat-1.jpg);
-    width: 100%;
-  }
-  span{
-    position: relative;
-  }
-  .heading{
-    font-size: 30px;
-    font-weight: bold;
-    
-  }
-  #title4::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    border: 3px solid #872ce1;
-    width: 50%;
+.Parent-category-Image-Hover {
+  display: inline-block;
+  overflow: hidden;
+  background-color: #eff4ee;
+  cursor: pointer;
+  border-radius: 5px;
 }
+.Parent-category-Image-Hover img {
+  width: 100%;
+  display: block;
+  transition: 0.3s;
+}
+.Parent-category-Image-Hover:hover img {
+  opacity: 0.9;
+  // transform: scale(1.05);
+  transform-origin: 50% 50%;
+}
+
+span {
+  position: relative;
+}
+
+.sec-heading {
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  @include md {
+    font-size: 28px;
+
+  }
+  &:after {
+    content: "";
+    display: block;
+    margin-top: -5px;
+    margin-left: 2px;
+    width: 50px;
+    height: 3px;
+
+
+    background-color: #8e2de2;
+    @include md {
+      margin-top: -5px;
+    }
+  }
+}
+
+
+
+
+
+// .box-shadow{
+//   transition:0.5s;
+//   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+// }
+.bottom-top{
+  transition:0.5s;
+}
+.bottom-top:hover{
+  transform: translateY(-10px);
+  transition: 0.3s;
+}
+
+

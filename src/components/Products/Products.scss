@@ -1,1 +1,24 @@
 @import "../../css-config/mixins.scss";
+
+
+.Parent-product-Image-Hover {
+  display: inline-block;
+  overflow: hidden;
+  background-color: #eff4ee;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.Parent-product-Image-Hover img {
+  width: 100%;
+  display: block;
+  transition: 0.3s;
+
+}
+.Parent-Col-Hover:hover .Parent-product-Image-Hover img {
+  opacity: 0.9;
+  transform: scale(1.05);
+  transform-origin: 50% 50%;
+}
+.product-description{
+  cursor: pointer;
+}

@@ -1,1 +1,42 @@
 @import "../../../css-config/mixins.scss";
+.Newsletter-bg {
+  background-image: url("../../../assets/newsletter-bg.jpeg");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input[type="text"] {
+  padding: 10px 20px;
+  border: none;
+  margin-right: 10px;
+}
+input:focus {
+  outline: none;
+}
+.Filled-purple-Button {
+  background-color: #872ce1;
+  color: white;
+  cursor: pointer;
+  padding: 10px 20px;
+  display: inline-block;
+  transition: 0.4s;
+  border: none;
+}
+
+.Filled-purple-Button:hover {
+  background-color: #6d1fbb;
+  color: white;
+  transition: 0.4s;
+}
+.newletter-icon{
+  font-size: 20px;
+}
