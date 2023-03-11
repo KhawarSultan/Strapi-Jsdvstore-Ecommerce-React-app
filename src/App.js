@@ -5,6 +5,7 @@ import Category from "./components/Category/Category";
 import Products from "./components/Products/Products";
 import { Route, Routes } from "react-router-dom";
 import AppContext from './utils/AppContext'
+import SingleProduct from "./components/SingleProduct/SingleProduct";
 function App() {
   return (
     <AppContext>
@@ -14,6 +15,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="products" element={<Products />} />
           <Route path="category" element={<Category />} />
+          <Route path="Single-Product" element={<SingleProduct />} />
         </Routes>
       </div>
     </AppContext>

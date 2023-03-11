@@ -17,6 +17,7 @@ const Header = () => {
                         <li > <Link className="text-decoration-none text-white" to="/">Home</Link> </li>
                         <li > <Link className="text-decoration-none text-white" to="products">Products</Link> </li>
                         <li > <Link className="text-decoration-none text-white "  to="category">Category</Link> </li>
+                        <li > <Link className="text-decoration-none text-white "  to="Single-Product">Single Product</Link> </li>
                     </span>
                 </div>
                 <div className="list-unstyled  ">
