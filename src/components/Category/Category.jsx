@@ -5,7 +5,7 @@ const Category = () => {
     return (
         <div className="container">
             <div className="py-4">
-                <span className="sec-heading text-capitalize"> <b>Category Title</b>
+                <span className="sec-heading text-capitalize"> <b>Category Products</b>
                 </span>
             </div>
             <div className="row ">

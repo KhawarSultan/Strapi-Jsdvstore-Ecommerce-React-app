@@ -37,6 +37,24 @@ input:focus {
   color: white;
   transition: 0.4s;
 }
-.newletter-icon{
+.newletter-icon {
   font-size: 20px;
 }
+
+
+.social-links {
+  display: flex;
+  gap: 2px;
+  text-align: center;
+  justify-content: center;
+}
+
+.social-links a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: #000000;
+  text-align: center;
+}
+

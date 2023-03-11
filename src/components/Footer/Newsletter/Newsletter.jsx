@@ -1,5 +1,4 @@
 import "./Newsletter.scss";
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
 const Newsletter = () => {
     return (
         <div className="Newsletter-bg py-5 my-5">
@@ -13,13 +12,14 @@ const Newsletter = () => {
                             <input type="text" placeholder="Email Address" />
                             <button className="Filled-purple-Button">Submit</button>
                         </div>
-                        <div >
-                            <FaFacebook className=" mx-2 newletter-icon" />
-                            <FaTwitter className=" mx-2 newletter-icon" />
-                            <FaInstagram className=" mx-2 newletter-icon "/>
-                            <FaLinkedin className=" mx-2 newletter-icon "/>
+                      
+                        <div className="social-links ">
+                            <a href="#"><i className="fab fa-facebook-f " style={{fontSize:'18px'}}></i></a>
+                            <a href="#"><i className="fab fa-twitter "style={{fontSize:'18px'}}></i></a>
+                            <a href="#"><i className="fab fa-instagram "style={{fontSize:'18px'}}></i></a>
+                            <a href="#"><i className="fab fa-linkedin-in "style={{fontSize:'18px'}}></i></a>
+                            <a href="#"><i className="fab fa-pinterest"style={{fontSize:'18px'}}></i></a>
                         </div>
-
 
 
 

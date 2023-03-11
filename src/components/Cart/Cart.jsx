@@ -1,6 +1,12 @@
-import "./Cart.scss";
-const Cart = () => {
-    return <div>Cart</div>;
-};
+import styles from "./Cart.scss";
+import React, { useState } from 'react';
+
+function Cart() {
+  return (
+    <div>
+    Hello from cart
+    </div>
+  );
+}
 
 export default Cart;
