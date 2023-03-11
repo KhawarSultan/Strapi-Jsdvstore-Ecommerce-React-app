@@ -1,1 +1,13 @@
 @import "../../css-config/mixins.scss";
+.Footer-link {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    position: relative;
+    transition: left ease 0.5s;
+    left: 0px;
+  }
+  .Footer-link:hover {
+    transition: left ease 0.3s;
+    left: 5px;
+    text-decoration: none;
+  }
