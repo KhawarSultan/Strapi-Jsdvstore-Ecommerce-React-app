@@ -1,5 +1,6 @@
 import "./Category.scss";
-import Product from '../Products/Products'
+import Product from '../Products/Products';
+
 const Category = () => {
     return (
         <div className="container">
@@ -8,7 +9,7 @@ const Category = () => {
                 </span>
             </div>
             <div className="row ">
-                <Product innerpage={true} />
+                <Product innerpage={true}/>
             </div>
         </div>
     );

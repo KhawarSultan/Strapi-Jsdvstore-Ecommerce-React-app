@@ -16,7 +16,7 @@ const Header = () => {
                     <span className=" list-unstyled gap-3 d-flex  ">
                         <li > <Link className="text-decoration-none text-white" to="/">Home</Link> </li>
                         <li > <Link className="text-decoration-none text-white" to="products">Products</Link> </li>
-                        <li > <Link className="text-decoration-none text-white" to="category">Category</Link> </li>
+                        <li > <Link className="text-decoration-none text-white "  to="category">Category</Link> </li>
                     </span>
                 </div>
                 <div className="list-unstyled  ">

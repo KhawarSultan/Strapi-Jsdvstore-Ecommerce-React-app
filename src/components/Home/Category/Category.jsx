@@ -11,7 +11,7 @@ const Category = () => {
 
         <div className="container">
             <div className="py-4">
-                <span className="sec-heading"> <b>Category</b>
+                <span className="sec-heading text-capitalize"> <b>Category</b>
                 </span>
             </div>
 
