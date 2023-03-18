@@ -22,7 +22,7 @@ const SingleProduct = () => {
         <>
 
             <div className="container">
-                <div className="row align-items-center py-sm-5 py-0">
+                <div className="row  py-sm-5 py-0">
                     <div className="col-sm-6 col-12  py-5 text-center ">
                         <img src={Singleproduct} className="Singleproduct" alt="" />
                     </div>

@@ -22,3 +22,4 @@ const useFetch = (url) => {
     return {loading, error, data}
 }
 export default useFetch
+

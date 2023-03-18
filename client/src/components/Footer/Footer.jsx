@@ -49,6 +49,7 @@ const Footer = () => {
                             <li > <Link className="text-decoration-none text-black Footer-link" to="/">Home</Link> </li>
                             <li > <Link className="text-decoration-none text-black Footer-link" to="products">Products</Link> </li>
                             <li > <Link className="text-decoration-none text-black Footer-link" to="category">Category</Link> </li>
+                            <li > <Link className="text-decoration-none text-black Footer-link" to="Single-Product">Single Product</Link> </li>
                         </span>
                     </div>
                 </div>
