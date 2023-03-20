@@ -1,47 +1,59 @@
+/* eslint-disable no-lone-blocks */
+/* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable no-unused-vars */
 import { useEffect, useState, useContext } from 'react';
+import fetchDataFromApi from '../../utils/api'
+import { Context } from '../../utils/AppContext';
 import axios from "axios";
 import Banner from "./Banner/Banner";
 import Category from "./Category/Category";
 import Products from "../Products/Products";
 import Newsletter from "../Footer/Newsletter/Newsletter";
 import Footer from "../Footer/Footer";
-import fetchDataFromApi from '../../utils/api'
 import "./Home.scss";
-import { Context } from '../../utils/AppContext';
-
-
-
+import Apirender from '../apirender'
 
 const Home = () => {
 
-
-
-    
     //Full stack video
+    const {categories, setCategories , products, setProducts} = useContext(Context);
 
-    const { categories, setCategories, products, setProducts } = useContext(Context);
     useEffect(() => {
         getCategories();
         getProducts();
-        
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const getCategories = () => {
-        fetchDataFromApi ("/categories?populate=*").then((response) => {
-            console.log(response);
-            setCategories(response);
+        fetchDataFromApi("/api/categories?populate=*").then((res) => {
+            console.log("categories", res.data);
+            setCategories(res.data);
         });
     };
     const getProducts = () => {
-        fetchDataFromApi("/products?populate=*").then((response) => {
-            console.log(response);
-            setProducts(response);
+        fetchDataFromApi("/api/products?populate=*").then((res) => {
+            console.log("Products", res.data);
+            setProducts(res.data);
         });
     };
 
+    return (
+        <div>
+            <Banner />
+            <Category categories={categories} />
+            <Products products={products} ProductHeading={"Popular Products"} />
+            <Newsletter />
+            <Footer />
+        </div>
+    );
+};
 
-    //Strapi Crash Course video
+export default Home;
+
+
+
+//Strapi Crash Course video
 
     // useEffect(() => {
     //     const fetchData = async () => {
@@ -58,33 +70,3 @@ const Home = () => {
     //     fetchData();
 
     // }, [])
-
-
-
-
-
-
-
-
-
-
-
-    return (
-        <div>
-            <Banner />
-            <Category categories={categories} />
-            <Products products={products} ProductHeading={"Popular Products"} />
-            <Newsletter />
-            <Footer />
-        </div>
-    );
-};
-
-export default Home;
-
-    // useEffect(() => {
-    //     getCategories()
-    // }, [])
-    // const getCategories = () => {
-    //     fetchDataFromApi("/categories").then(response => console.log(response))
-    // }

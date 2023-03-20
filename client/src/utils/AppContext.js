@@ -4,14 +4,17 @@ import { useState } from "react"
 export const Context = createContext();
 
 function Appcontext({ children }) {
-    const [categories, setCategories ,products, setProducts ] = useState();
+    const [categories, setCategories , products, setProducts  ] = useState();
+    
 
     return (
+  
         <Context.Provider value={{
             categories,
             setCategories,
             products,
             setProducts,
+            
         }}
         >
             {children}

@@ -1,7 +1,7 @@
 import "./Products.scss";
 import Product from './Product/Product'
 
-const Products = ({ innerpage, ProductHeading }) => {
+const Products = ({ innerpage, ProductHeading ,products }) => {
    
 
     return (
@@ -13,13 +13,7 @@ const Products = ({ innerpage, ProductHeading }) => {
                     <span className="sec-heading text-capitalize"> <b>{ProductHeading}</b></span>
                 </div>}
                 <div className="row">
-                    <Product />
-                    <Product />
-                    <Product />
-                    <Product />
-                    <Product />
-                    <Product />
-                    <Product />
+                    <Product products={products} />
                 </div>
             </div>
 

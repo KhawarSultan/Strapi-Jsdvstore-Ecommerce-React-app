@@ -1,4 +1,4 @@
-import {React, useEffect } from "react";
+import { React, useEffect } from "react";
 import Header from "./components/Header/Header";
 import Home from './components/Home/Home';
 import Category from "./components/Category/Category";
@@ -13,11 +13,10 @@ function App() {
     <AppContext>
       <Header />
       <div>
-        
         <Routes>
-          <Route  path="/" element={<Home />} />
-          <Route path="products/:id" element={<Products ProductHeading={"Popular Products"} />} />
-          <Route path="category/:id" element={<Category />} />
+          <Route path="/" element={<Home />} />
+          <Route path="products" element={<Products ProductHeading={"Popular Products"} />} />
+          <Route path="category" element={<Category />} />
           <Route path="Single-Product" element={<SingleProduct />} />
           <Route path="cart" element={<Cart />} />
         </Routes>
