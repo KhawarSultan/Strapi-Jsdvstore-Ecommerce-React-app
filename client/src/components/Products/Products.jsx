@@ -1,19 +1,19 @@
 import "./Products.scss";
 import Product from './Product/Product'
 
-const Products = ({ innerpage, ProductHeading ,products }) => {
-   
+const Products = ({ innerpage, ProductHeading, products }) => {
+console.log('inner product component ' ,products)
 
     return (
         <>
-           
 
-            <div  className="container">
+
+            <div className="container">
                 {!innerpage && <div className="py-4">
                     <span className="sec-heading text-capitalize"> <b>{ProductHeading}</b></span>
                 </div>}
                 <div className="row">
-                    <Product products={products} />
+                    <Product products={products}/>
                 </div>
             </div>
 

@@ -16,13 +16,13 @@ import Apirender from '../apirender'
 const Home = () => {
 
     //Full stack video
-    const {categories, setCategories , products, setProducts} = useContext(Context);
-
+    const { categories, setCategories } = useContext(Context);
+    const { products, setProducts } = useContext(Context);
     useEffect(() => {
-        getCategories();
         getProducts();
+        getCategories();
 
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const getCategories = () => {
@@ -33,7 +33,7 @@ const Home = () => {
     };
     const getProducts = () => {
         fetchDataFromApi("/api/products?populate=*").then((res) => {
-            console.log("Products", res.data);
+            console.log("Outer Products Component", res.data);
             setProducts(res.data);
         });
     };
@@ -42,7 +42,7 @@ const Home = () => {
         <div>
             <Banner />
             <Category categories={categories} />
-            <Products products={products} ProductHeading={"Popular Products"} />
+            <Products ProductHeading={"Popular Products"} products={products} />
             <Newsletter />
             <Footer />
         </div>

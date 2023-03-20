@@ -4,8 +4,8 @@ import { useState } from "react"
 export const Context = createContext();
 
 function Appcontext({ children }) {
-    const [categories, setCategories , products, setProducts  ] = useState();
-    
+    const [categories, setCategories ] = useState();
+    const [products, setProducts  ] = useState();
 
     return (
   

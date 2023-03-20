@@ -5,7 +5,7 @@ const fetchDataFromApi = async (url) => {
             process.env.REACT_APP_API_URL + url, {
             headers: { Authorization: "bearer" + process.env.REACT_APP_API_TOKEN, },
         });
-        console.log(data);
+        // console.log(data);
         return data;
     } catch (err) {
         console.log(err);

@@ -23,7 +23,6 @@ const Category = ({categories}) => {
                    {categories?.data?.map((item) => (
                         <div key={item.id} className="col-lg-3 col-md-4 col-sm-6 col-12 py-3 ">
                             <div class="Parent-category-Image-Hover bottom-top">
-                                {/* <h1>{item.attributes.title}</h1> */}
                                 <img src={process.env.REACT_APP_API_URL + item.attributes.img.data.attributes.url || 'Item not found'} />
                             </div>
                         </div>

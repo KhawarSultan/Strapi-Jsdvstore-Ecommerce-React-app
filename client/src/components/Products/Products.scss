@@ -2,11 +2,18 @@
 
 
 .Parent-product-Image-Hover {
+  padding: 20px 10px;
   display: inline-block;
   overflow: hidden;
   background-color: #eff4ee;
   cursor: pointer;
   border-radius: 5px;
+  @include md{
+    padding: 50px 30px;
+
+  }
+  
+
 }
 .Parent-product-Image-Hover img {
   width: 100%;
