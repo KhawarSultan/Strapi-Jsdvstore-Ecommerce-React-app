@@ -48,13 +48,18 @@
 .social-links a {
   font-size: 16px;
 }
-.Singleproduct{
-    background-color:#eff4ee;
+
+.Singleproduct-image{
+  background-color:#eff4ee;
+
     position: relative;
     width: 100%;
+    @include md{
+      width: 80%;
+    }
 }
 .truncate {
   white-space: nowrap;
-  overflow: hidden;
+  overflow:hidden;
   text-overflow: ellipsis;
 }

@@ -1,12 +1,17 @@
 import "./SingleProduct.scss";
+import useFetch from '../../Hooks/useFetch';
+import { useParams } from 'react-router-dom'
 import RelatedProducts from './RelatedProducts/RelatedProducts'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { FaPlus, FaMinus, FaShoppingCart } from 'react-icons/fa';
 import Singleproduct from '../../assets/products/headphone-prod-5.webp'
 import Newsletter from '../Footer/Newsletter/Newsletter';
 import Footer from '../Footer/Footer'
 import { FaFacebookCi, FaTwitterSquare, FaInstagramSquare, FaLinkedin, FaPinterestSquare } from 'react-icons/fa';
 const SingleProduct = () => {
+    useEffect(() => {
+        window.scrollTo({ top: 0 });
+    }, []);
     const [quantity, setQuantity] = useState(1);
 
     const handleIncrement = () => {
@@ -18,18 +23,23 @@ const SingleProduct = () => {
             setQuantity(quantity - 1);
         }
     };
+    const { id } = useParams();
+    const { data } = useFetch(`/api/products?populate=*&[filters][id]=${id}`);
+    console.log("Data from Single-Product id ", id);
+    console.log("Data from Single-Product id ", data);
     return (
         <>
 
             <div className="container">
-                <div className="row  py-sm-5 py-0">
-                    <div className="col-sm-6 col-12  py-5 text-center ">
-                        <img src={Singleproduct} className="Singleproduct" alt="" />
+                <div className="row py-sm-5 py-0" >
+                    <div className="col-md-6 col-12  py-5 text-center " >
+                        <img src={process.env.REACT_APP_API_URL + data?.data?.data?.[0]?.attributes?.img?.data?.[0]?.attributes?.url} className="Singleproduct-image " alt="" />
+
                     </div>
-                    <div className="col-sm-6 col-12  py-sm-5 py-0 ">
-                        <h4  > <b> Boat Rockerz 450 DC edition | Wireless Headphone with 40mm Dynamic Driver </b>    </h4>
-                        <p className="my-4" style={{ fontSize: '26px' }} > <b> $99 </b> </p>
-                        <p style={{ fontSize: '18px' }}> There is no better justice to your playlist & binging than Rockerz 450 boAt DC edition. If low battery is your enemy, the 15HRS non-stop playback is here to rightfully combat that. Feel the power rising up in your veins as you indulge in your playlist with its 40mm dynamic drivers. Make adaptiveness your superpower just like the adaptive headband of Rockerz 450. Get ready to rule with Boat Rockerz </p>
+                    <div className="col-md-6 col-12  py-sm-5 py-0 ">
+                        <h4  > <b>{data?.data?.data?.[0]?.attributes?.title} </b>    </h4>
+                        <p className="my-4" style={{ fontSize: '26px' }} > <b> {data?.data?.data?.[0]?.attributes?.price} </b> </p>
+                        <p style={{ fontSize: '18px' }}> {data?.data?.data?.[0]?.attributes?.description}  </p>
 
 
                         <div className="product gap-4 d-flex my-4">
@@ -51,7 +61,7 @@ const SingleProduct = () => {
                         <hr />
                         <div className="my-4">
 
-                            <p> <b>Category: </b> Headphones </p>
+                            <p> <b>Category: </b> {data?.data?.data?.[0]?.attributes?.categories?.data?.[0]?.attributes?.title} </p>
                             <div className="d-flex ">
                                 <p className="a"> <b>Share:</b> </p>
                                 <span className="social-links">

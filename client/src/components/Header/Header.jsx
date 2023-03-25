@@ -14,15 +14,14 @@ const Header = () => {
 
     return (
         <>
-            
-            <div className="main-header px-3" >
 
+            <div className="main-header px-3" >
                 <div className="container py-3 text-white main-header-child ">
                     <div className=" links ">
                         <span className=" list-unstyled gap-3 d-flex  ">
                             <li > <Link className="text-decoration-none text-white" to="/">Home</Link> </li>
-                            <li > <Link className="text-decoration-none text-white" to="products">Products</Link> </li>
-                            <li > <Link className="text-decoration-none text-white " to="category">Category</Link> </li>
+                            {/* <li > <Link className="text-decoration-none text-white" to="products">Products</Link> </li> */}
+                            {/* <li > <Link className="text-decoration-none text-white " to="category">Category</Link> </li> */}
                             <li > <Link className="text-decoration-none text-white " to="Single-Product">Single Product</Link> </li>
                         </span>
                     </div>
@@ -38,7 +37,7 @@ const Header = () => {
                             <li>
                                 <TbHeart className="icon" />
                             </li>
-                            <li className=" position-relative pointer"  onClick={() => setShowCart(true)}>
+                            <li className=" position-relative pointer" onClick={() => setShowCart(true)}>
                                 <FiShoppingCart className="cart-icon" />
                                 <span className="cart-popup">5</span>
                             </li>
