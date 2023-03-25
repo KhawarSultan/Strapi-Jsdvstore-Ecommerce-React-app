@@ -12,6 +12,7 @@ const Category = () => {
     }, []);
     const { id } = useParams();
     const { data } = useFetch(`/api/products?populate=*&[filters][categories][id]=${id}`);
+    
     console.log("Data from category id ",id);
     console.log("Data from category id ",data);
 

@@ -10,7 +10,7 @@ const Product = ({ products }) => {
     return (
         <>
             {products?.data?.map((item) => (
-                <div key={item.id} className="col-lg-3 col-md-4 col-sm-6 col-6 py-3 Parent-Col-Hover " onClick={()=> Navigate("Single-Product/" + item.id)}>
+                <div key={item.id} className="col-lg-3 col-md-4 col-sm-6 col-6 py-3 Parent-Col-Hover " onClick={()=> Navigate("/Single-Product/" + item.id)}>
                     <div class="Parent-product-Image-Hover ">
                         <img  src={process.env.REACT_APP_API_URL + item.attributes.img.data[0].attributes.url} />
                     </div>

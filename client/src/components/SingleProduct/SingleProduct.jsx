@@ -4,7 +4,6 @@ import { useParams } from 'react-router-dom'
 import RelatedProducts from './RelatedProducts/RelatedProducts'
 import { useState, useEffect } from 'react';
 import { FaPlus, FaMinus, FaShoppingCart } from 'react-icons/fa';
-import Singleproduct from '../../assets/products/headphone-prod-5.webp'
 import Newsletter from '../Footer/Newsletter/Newsletter';
 import Footer from '../Footer/Footer'
 import { FaFacebookCi, FaTwitterSquare, FaInstagramSquare, FaLinkedin, FaPinterestSquare } from 'react-icons/fa';
@@ -25,8 +24,12 @@ const SingleProduct = () => {
     };
     const { id } = useParams();
     const { data } = useFetch(`/api/products?populate=*&[filters][id]=${id}`);
+    const Category_id = data?.data?.data?.[0]?.attributes?.categories?.data?.[0]?.id;
+
     console.log("Data from Single-Product id ", id);
     console.log("Data from Single-Product id ", data);
+    console.log("Product id :", id);
+    console.log("Category id :", data?.data?.data?.[0]?.attributes?.categories?.data?.[0]?.id);
     return (
         <>
 
@@ -36,7 +39,7 @@ const SingleProduct = () => {
                         <img src={process.env.REACT_APP_API_URL + data?.data?.data?.[0]?.attributes?.img?.data?.[0]?.attributes?.url} className="Singleproduct-image " alt="" />
 
                     </div>
-                    <div className="col-md-6 col-12  py-sm-5 py-0 ">
+                    <div className="col-md-6 col-12 py-sm-5 py-0 ">
                         <h4  > <b>{data?.data?.data?.[0]?.attributes?.title} </b>    </h4>
                         <p className="my-4" style={{ fontSize: '26px' }} > <b> {data?.data?.data?.[0]?.attributes?.price} </b> </p>
                         <p style={{ fontSize: '18px' }}> {data?.data?.data?.[0]?.attributes?.description}  </p>
@@ -76,7 +79,9 @@ const SingleProduct = () => {
                         </div>
                     </div>
                 </div>
-                <RelatedProducts />
+                
+                 
+                <RelatedProducts ProductId={id} CategoryId={Category_id}    />
             </div>
 
 

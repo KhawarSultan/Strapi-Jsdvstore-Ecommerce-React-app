@@ -6,9 +6,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import Payments from "../../assets/payments.png";
+import { useNavigate } from "react-router-dom";
 
 
 const Footer = () => {
+    const Navigate = useNavigate();
+
     return (
 
         <div>
@@ -37,10 +40,10 @@ const Footer = () => {
                     <div className="col-md-3 col-sm-4 col-12 py-3">
                         <h3> <b> Categories </b> </h3>
                         <span className=" list-unstyled">
-                            <li > <Link className="text-decoration-none text-black Footer-link" to="/">Headphone</Link> </li>
-                            <li > <Link className="text-decoration-none text-black Footer-link" to="products">Bluetooth Speakers</Link> </li>
-                            <li > <Link className="text-decoration-none text-black Footer-link" to="category">Smart watches</Link> </li>
-                            <li > <Link className="text-decoration-none text-black Footer-link" to="category">Wireless Earbuds</Link> </li>
+                            <li  className="text-decoration-none text-black Footer-link pointer" onClick={()=>Navigate("/category/1")}>Headphone</li>
+                            <li  className="text-decoration-none text-black Footer-link pointer" onClick={()=>Navigate("/category/2")}>Smart watches</li>
+                            <li  className="text-decoration-none text-black Footer-link pointer" onClick={()=>Navigate("/category/3")}>Wireless Earbuds</li>
+                            <li  className="text-decoration-none text-black Footer-link pointer" onClick={()=>Navigate("/category/4")}>Bluetooth Speakers</li>
                         </span>
                     </div>
                     <div className="col-md-3 col-sm-4 col-12 py-3">

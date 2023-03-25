@@ -1,14 +1,15 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-lone-blocks */
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FiShoppingCart } from 'react-icons/fi';
 import { TbSearch, TbHeart } from "react-icons/tb";
+import { AiFillHome } from "react-icons/ai";
 import React, { useState } from 'react';
 import Cart from '../Cart/Cart'
 import "./Header.scss";
 import Search from './Search/Search'
 const Header = () => {
-
+    const Navigate = useNavigate();
     const [ShowCart, setShowCart] = useState(false);
     const [ShowSearch, setShowSearch] = useState(false);
 
@@ -19,14 +20,14 @@ const Header = () => {
                 <div className="container py-3 text-white main-header-child ">
                     <div className=" links ">
                         <span className=" list-unstyled gap-3 d-flex  ">
-                            <li > <Link className="text-decoration-none text-white" to="/">Home</Link> </li>
+                            <span className="text-decoration-none text-white pointer  d-flex align-items-center" onClick={() => Navigate("/")}><AiFillHome size={16} className="icon pointer"/>  Home </span>
                             {/* <li > <Link className="text-decoration-none text-white" to="products">Products</Link> </li> */}
                             {/* <li > <Link className="text-decoration-none text-white " to="category">Category</Link> </li> */}
-                            <li > <Link className="text-decoration-none text-white " to="Single-Product">Single Product</Link> </li>
+                            {/* <li > <Link className="text-decoration-none text-white " to="Single-Product">Single Product</Link> </li> */}
                         </span>
                     </div>
                     <div className="list-unstyled  ">
-                        <li > <Link className="text-decoration-none text-white" to="/"><span className="center"> <b> JSDVSTORE.</b> </span></Link> </li>
+                        <li className="text-decoration-none text-white pointer" onClick={() => Navigate("/")} > <span className="center"> <b> JSDVSTORE.</b> </span> </li>
                     </div>
                     <div className="  ">
                         <span className="d-flex list-unstyled gap-4 " >
