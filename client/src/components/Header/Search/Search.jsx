@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { MdClose } from 'react-icons/md';
 import "./Search.scss";
 import Singleproduct from '../../../assets/products/headphone-prod-5.webp';
