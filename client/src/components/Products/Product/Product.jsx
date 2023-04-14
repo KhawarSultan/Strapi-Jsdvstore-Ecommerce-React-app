@@ -16,7 +16,7 @@ const Product = ({ products }) => {
                     </div>
                     <div className="my-2 product-description">
                         <span >  {item.attributes.title}  </span> <br />
-                        <span className="my-2" style={{ fontSize: '20px' }} > <b>{item.attributes.price} </b> </span>
+                        <span className="my-2" style={{ fontSize: '20px' }} > <b> $ {item.attributes.price} </b> </span>
                     </div>
                 </div>
             ))}

@@ -1,27 +1,30 @@
+/* eslint-disable no-unused-vars */
 import "./SingleProduct.scss";
 import useFetch from '../../Hooks/useFetch';
 import { useParams } from 'react-router-dom'
 import RelatedProducts from './RelatedProducts/RelatedProducts'
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { FaPlus, FaMinus, FaShoppingCart } from 'react-icons/fa';
 import Newsletter from '../Footer/Newsletter/Newsletter';
-import Footer from '../Footer/Footer'
+import Footer from '../Footer/Footer';
 import { FaFacebookCi, FaTwitterSquare, FaInstagramSquare, FaLinkedin, FaPinterestSquare } from 'react-icons/fa';
+import { Context } from "../../utils/AppContext";
 const SingleProduct = () => {
     useEffect(() => {
         window.scrollTo({ top: 0 });
     }, []);
     const [quantity, setQuantity] = useState(1);
 
-    const handleIncrement = () => {
+    const Increment = () => {
         setQuantity(quantity + 1);
     };
 
-    const handleDecrement = () => {
+    const Decrement = () => {
         if (quantity > 1) {
             setQuantity(quantity - 1);
         }
     };
+    const {handleAddToCart} = useContext(Context);
     const { id } = useParams();
     const { data } = useFetch(`/api/products?populate=*&[filters][id]=${id}`);
     const Category_id = data?.data?.data?.[0]?.attributes?.categories?.data?.[0]?.id;
@@ -41,22 +44,27 @@ const SingleProduct = () => {
                     </div>
                     <div className="col-md-6 col-12 py-sm-5 py-0 ">
                         <h4  > <b>{data?.data?.data?.[0]?.attributes?.title} </b>    </h4>
-                        <p className="my-4" style={{ fontSize: '26px' }} > <b> {data?.data?.data?.[0]?.attributes?.price} </b> </p>
+                        <p className="my-4" style={{ fontSize: '26px' }} > <b> $ {data?.data?.data?.[0]?.attributes?.price} </b> </p>
                         <p style={{ fontSize: '18px' }}> {data?.data?.data?.[0]?.attributes?.description}  </p>
 
 
-                        <div className="product gap-4 d-flex my-4">
+                        <div className="product gap-2 d-flex my-4">
                             <div className="quantity-wrapper">
-                                <button className="quantity-btn minus " onClick={handleDecrement}>
+                                <button className="quantity-btn minus " onClick={Decrement}>
                                     <FaMinus style={{ fontSize: '10px' }} />
                                 </button>
                                 <span className="quantity px-4">{quantity}</span>
-                                <button className="quantity-btn plus" onClick={handleIncrement}>
+                                <button className="quantity-btn plus" onClick={Increment}>
                                     <FaPlus style={{ fontSize: '10px' }} />
                                 </button>
 
                             </div>
-                            <button className="Filled-purple-Button gap-2 d-flex align-items-center" >
+                            <button className="Filled-purple-Button rounded-pill gap-2 d-flex align-items-center" onClick={()=> {
+                               console.log("call handleAddToCart")
+                               handleAddToCart(data?.data?.data?.[0], quantity)
+                               setQuantity(1);
+
+                            }} >
                                 <FaShoppingCart />
                                 Add to Cart
                             </button>

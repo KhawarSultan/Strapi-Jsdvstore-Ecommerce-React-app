@@ -54,7 +54,12 @@
 .left {
   order: 2;
 }
-
+.text-align{
+  text-align: center;
+  @include md{
+    text-align: left;
+  }
+}
 .right {
   order: 1;
 }

@@ -1,0 +1,38 @@
+@import "../../../css-config/mixins.scss";
+
+.width {
+  width: 100%;
+}
+
+.cart-close-inner {
+  font-size: 28px;
+  @include md {
+    font-size: 30px;
+  }
+}
+.text-cart {
+  padding: 0px 15px;
+  @include md {
+    padding: 0px 95px;
+  }
+}
+.para-dots {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 56%;
+}
+.scrollable-div {
+  @include md {
+    height: 530px;
+  }
+  height: 470px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.close-flex {
+  display: flex;
+  @include md {
+    justify-content: space-between;
+  }
+}

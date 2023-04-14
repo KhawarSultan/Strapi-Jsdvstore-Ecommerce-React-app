@@ -10,9 +10,10 @@ import Category from "./Category/Category";
 import Products from "../Products/Products";
 import Newsletter from "../Footer/Newsletter/Newsletter";
 import Footer from "../Footer/Footer";
-import App from '../../App'
+import App from '../../App';
 import "./Home.scss";
 const Home = () => {
+
 
     //Full stack video
     const { categories, setCategories } = useContext(Context);

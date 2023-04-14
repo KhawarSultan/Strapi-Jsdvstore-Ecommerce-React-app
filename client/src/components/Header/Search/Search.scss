@@ -35,25 +35,34 @@
         height: 80px;
       }
     }
-    svg{
-        position: absolute;
-        font-size: 25px;
-        right: 20px;
-        top: 50%;
-        transform: translateY(-50%);
-        @include md{
-            right:40px;
-            font-size: 50px;
-        }
+    svg {
+      position: absolute;
+      font-size: 25px;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      @include md {
+        right: 40px;
+        font-size: 50px;
+      }
     }
   }
 }
 @keyframes slideSearchWindow {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
 
-    0%{
-        transform: translateY(100%);
-    }
-    100%{
-        transform: translateY(0%);
-    }
+.para-dots-desc {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 200px;
+  @include md {
+    width: 910px;
+  }
 }

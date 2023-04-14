@@ -8,7 +8,11 @@ import React, { useState } from 'react';
 import Cart from '../Cart/Cart'
 import "./Header.scss";
 import Search from './Search/Search'
+
+import { useContext } from 'react'
+import { Context } from "../../utils/AppContext";
 const Header = () => {
+  const { cartCount } = useContext(Context);
     const Navigate = useNavigate();
     const [ShowCart, setShowCart] = useState(false);
     const [ShowSearch, setShowSearch] = useState(false);
@@ -20,7 +24,7 @@ const Header = () => {
                 <div className="container py-3 text-white main-header-child ">
                     <div className=" links ">
                         <span className=" list-unstyled gap-3 d-flex  ">
-                            <span className="text-decoration-none text-white pointer  d-flex align-items-center" onClick={() => Navigate("/")}><AiFillHome size={16} className="icon pointer"/>  Home </span>
+                            <span className="text-decoration-none text-white pointer  d-flex align-items-center" onClick={() => Navigate("/")}> <strong>Home </strong>   </span>
                             {/* <li > <Link className="text-decoration-none text-white" to="products">Products</Link> </li> */}
                             {/* <li > <Link className="text-decoration-none text-white " to="category">Category</Link> </li> */}
                             {/* <li > <Link className="text-decoration-none text-white " to="Single-Product">Single Product</Link> </li> */}
@@ -40,7 +44,7 @@ const Header = () => {
                             </li>
                             <li className=" position-relative pointer" onClick={() => setShowCart(true)}>
                                 <FiShoppingCart className="cart-icon" />
-                                <span className="cart-popup">5</span>
+                                {!!cartCount && <span className="cart-popup">{cartCount}</span>}
                             </li>
                         </span>
                     </div>

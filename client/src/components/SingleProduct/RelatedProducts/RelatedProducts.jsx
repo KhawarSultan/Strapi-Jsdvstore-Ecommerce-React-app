@@ -7,7 +7,7 @@ const RelatedProducts = ({ ProductId, CategoryId }) => {
     return (
 
         <div>
-            <Products ProductHeading={"Related Products"} products={data?.data} />
+            <Products ProductHeading={"Related Products"} products={data?.data} PaddingX={'px-0'} />
         </div>
     );
 };

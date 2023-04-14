@@ -49,10 +49,10 @@ const Footer = () => {
                     <div className="col-md-3 col-sm-4 col-12 py-3">
                         <h3> <b> Pages </b> </h3>
                         <span className=" list-unstyled">
-                            <li > <Link className="text-decoration-none text-black Footer-link" to="/">Home</Link> </li>
-                            <li > <Link className="text-decoration-none text-black Footer-link" to="products">Products</Link> </li>
-                            <li > <Link className="text-decoration-none text-black Footer-link" to="category">Category</Link> </li>
-                            <li > <Link className="text-decoration-none text-black Footer-link" to="Single-Product">Single Product</Link> </li>
+                            <li className="text-decoration-none text-black Footer-link pointer" onClick={()=>Navigate("/")}>Home  </li>
+                            <li className="text-decoration-none text-black Footer-link pointer" onClick={()=>Navigate("/category/1")}>Products  </li>
+                            <li className="text-decoration-none text-black Footer-link pointer" onClick={()=>Navigate("/category/1")}>Category  </li>
+                            <li className="text-decoration-none text-black Footer-link pointer" onClick={()=>Navigate("/Single-Product/1")}>Single Product  </li>
                         </span>
                     </div>
                 </div>
