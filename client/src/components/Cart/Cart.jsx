@@ -11,8 +11,12 @@ import { Link, useNavigate } from "react-router-dom";
 import { useContext } from 'react'
 import { Context } from "../../utils/AppContext";
 const Cart = ({ setShowCart }) => {
+
+
   const { cartItems, cartSubTotal } = useContext(Context);
   const Navigate = useNavigate();
+
+
   return (
 
     <>
@@ -40,7 +44,7 @@ const Cart = ({ setShowCart }) => {
           </div>
           <hr className="m-0" />
           <div className="p-1 text-center d-flex" >
-            <button className="Filled-purple-Button " style={{ margin: 'auto', textAlign: 'center', width: '100%' }}  >CHECKOUT</button>
+            <button className="Filled-purple-Button "  style={{ margin: 'auto', textAlign: 'center', width: '100%' }}  >CHECKOUT</button>
           </div>
         </div>}
 
@@ -55,9 +59,3 @@ const Cart = ({ setShowCart }) => {
 }
 
 export default Cart;
-
-{/* <div className="Empty-cart">
-  <BsCartX />
-  <span>No product in the Cart</span>
-  <button className="Filled-purple-Button">RETURN TO SHOP</button>
-</div>  */}
