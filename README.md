@@ -1,8 +1,35 @@
-# Getting Started with Create React App
+# Strapi Jsdvstore React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The Strapi Jsdvstore Ecommerce React app is a comprehensive and dynamic web application built using HTML, CSS, JavaScript, Bootstrap CSS, and React.js. It combines the power of the Strapi headless CMS (Content Management System) with a React.js front-end to create an advanced ecommerce platform for selling gadgets. The app utilizes HTML for content structure, CSS for styling and layout, JavaScript for interactivity, Bootstrap CSS for responsive design and pre-built components, and React.js for efficient UI rendering and state management. The Strapi Jsdvstore Ecommerce Gadgets React app offers a user-friendly interface where customers can browse through various gadget categories, view detailed product information, add items to their cart, and securely complete their purchases. With Strapi as the CMS, the app enables easy management of product listings, inventory, and orders. The use of React.js ensures a smooth and responsive user experience with dynamic updates and real-time interactions. By leveraging Bootstrap CSS, the app is visually appealing and adapts seamlessly to different screen sizes and devices. The Strapi Jsdvstore Ecommerce Gadgets React app represents a comprehensive and feature-rich ecommerce solution, providing a seamless online shopping experience for customers looking to purchase gadgets.
 
-## Available Scripts
+## Badges
+
+[![HTML](https://img.shields.io/badge/Built%20with-HTML-orange?style=flat-square&logo=html5)](https://www.w3.org/html/)
+[![CSS](https://img.shields.io/badge/Styled%20with-CSS-blue?style=flat-square&logo=css3&logoColor=blue)](https://www.w3.org/Style/CSS/Overview.en.html)
+![Bootstrap CSS](https://img.shields.io/badge/CSS%20framework-Bootstrap%20Css-7952B3?style=flat-square&logo=Bootstrap&logoColor=white)
+[![JavaScript](https://img.shields.io/badge/Powered%20by-JavaScript-yellow?style=flat-square&logo=javascript)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+![SCSS](https://img.shields.io/badge/JavaScript%20library-React-61DAFB?style=flat-square&for-the-badge&logo=react&logoColor=white)
+[![Responsive Design](https://img.shields.io/badge/Responsive-Design-green?style=flat-square&logo=responsive-design)](https://en.wikipedia.org/wiki/Responsive_web_design)
+[![Mobile-Friendly](https://img.shields.io/badge/Mobile-Friendly-brightgreen?style=flat-square&logo=mobile)](https://developers.google.com/web/fundamentals/design-and-ux/principles)
+[![Conversion Rate](https://img.shields.io/badge/High-Conversion%20Rate-success?style=flat-square&logo=conversionxl)](https://conversionxl.com/blog/)
+
+## Demo
+
+Check out the live demo of the Strapi Jsdvstore React App  [here](https://jsdvstore.vercel.app/).
+
+## Screenshots
+
+![App Screenshot](https://res.cloudinary.com/denajbnh4/image/upload/v1683807342/Khawar/Screenshot_1_ecj6zf.png)
+
+## Tech Stack
+
+![HTML](https://img.shields.io/badge/-HTML-orange?style=flat-square&logo=html5)
+![CSS](https://img.shields.io/badge/-CSS-blue?style=flat-square&logo=css3)
+![Bootstrap CSS](https://img.shields.io/badge/Bootstrap-7952B3?style=flat-square&for-the-badge&logo=bootstrap&logoColor=white)
+![JavaScript](https://img.shields.io/badge/-JavaScript-yellow?style=flat-square&logo=javascript)
+![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&for-the-badge&logo=react&logoColor=white)
+
+## Run Locally
 
 In the project directory, you can run:
 
@@ -39,32 +66,14 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## About Me
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+[@Khawar Sultan](https://github.com/KhawarSultan) A Creative Front-End Web Developer providing high-impact web solutions for diverse industry organizations. Skilled in designing, developing and testing multiple web-based applications incorporating a range of technologies.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Aspiring to Create Your Websites with strong technical skills as a Front-End Developer
 
-### Code Splitting
+## Links
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[![GitHub](https://img.shields.io/badge/Github-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/KhawarSultan)
+[![Portfolio](https://img.shields.io/badge/Portfolio-green?style=for-the-badge&logo=font-awesome&logoColor=white)](https://khawarportfolio.netlify.app/)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/khawar-sultan-989314209/)
